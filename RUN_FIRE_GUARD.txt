@@ -1,0 +1,18 @@
+FIRE GUARD — EXECUÇÃO
+
+1) Abra esta pasta no terminal.
+2) Rode:
+   npm install
+3) Depois:
+   npx expo start
+4) Para Android:
+   npx expo start --android
+
+O projeto usa o .env que acompanha esta versão. Se ele não estiver presente, copie .env.example para .env e informe a URL e a chave pública do seu Supabase.
+
+IMPORTANTE:
+- Nunca coloque service_role no aplicativo.
+- O primeiro ADMIN deve seguir o bootstrap do contrato do banco.
+- O cadastro de usuários usa a Edge Function supabase/functions/provision-user.
+- A função deve estar publicada no MESMO projeto Supabase usado pelo .env.
+- Se você ainda não publicou a função, login, alertas e ocorrências podem funcionar; o cadastro de novos usuários ficará indisponível até a publicação.
